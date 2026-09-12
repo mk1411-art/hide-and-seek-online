@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hide & Seek Online</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<h1>🫣 Hide & Seek</h1>
+<section id="home" class="card">
+<input id="name" maxlength="20" placeholder="Dein Name">
+<button id="create">Lobby erstellen</button>
+<div class="line">oder</div>
+<input id="code" inputmode="numeric" maxlength="4" placeholder="4-stelliger Lobbycode">
+<button id="join">Lobby beitreten</button>
+<p id="err"></p>
+</section>
+<section id="lobby" class="card hidden">
+<h2>Lobby <span id="lobbyCode"></span></h2>
+<p>Schick den Code an deine Freunde.</p>
+<div id="players"></div>
+<button id="start">▶ Runde starten</button>
+<button id="reset" class="secondary">Neue Runde</button>
+</section>
+<section id="game" class="card hidden">
+<div class="role" id="role"></div>
+<div class="timer" id="timer">10:00</div>
+<div class="arena">🗺️<br><small>Vereinbarter Spielbereich</small></div>
+<h2 id="status"></h2>
+</section>
+</main><script src="/socket.io/socket.io.js"></script><script src="app.js"></script></body></html>
